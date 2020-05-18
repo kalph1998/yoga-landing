@@ -1,143 +1,17 @@
+@import "./abstract/funtions";
+@import "./abstract/mixins";
+@import "./abstract/variables";
+
 @import "./base/base";
+@import "./base/animations";
+@import "./base/typography";
+@import "./base/utilities";
 
-$color-primary: #55c57a;
-$color-primary-light: #7ed56f;
-$color-primary-dark: #28b485;
-$color-grey-dark: #777;
-$color-black: black;
-$color-white: white;
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-html {
-  font-size: 62.5%;
-}
+@import "./layout/header";
 
-body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  line-height: 1.7;
-  color: $color-grey-dark;
-  padding: 2rem;
-}
+@import "./pages/home";
 
-.header {
-  height: 95vh;
-  background-image: linear-gradient(
-      to right bottom,
-      rgba(85, 197, 122, 0.658),
-      rgba(40, 180, 133, 0.644)
-    ),
-    url(../img/background.jpg);
-  background-size: cover;
-  background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-}
-.logo-container {
-  position: relative;
-  display: flex;
-  justify-content: start;
-  padding-left: 2.7rem;
-  padding-top: 1rem;
-}
-.logo {
-  height: 5.5rem;
-}
-.header-container {
-  color: $color-white;
-  text-transform: uppercase;
-  margin-bottom: 6rem;
-}
-.text-box {
-  position: absolute;
-  top: 35%;
-  left: 55%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-.header-main {
-  display: block;
-  font-size: 10rem;
-  font-weight: 400;
-  letter-spacing: 2.5rem;
-  animation-name: moveinleft;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-}
-.header-sub {
-  display: block;
-  font-size: 1.5rem;
-  font-weight: 400;
-  letter-spacing: 0.3rem;
-  animation: moveinright 1s ease-out;
-}
-
-.btn:link,
-.btn:visited {
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 1.5rem 4rem;
-  display: inline-block;
-  border-radius: 4rem;
-  transition: all 0.15s;
-  font-size: 1.6rem;
-}
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-.btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-.btn-animated {
-  animation: moveinbottom 0.5s ease-in 0.75s;
-  animation-fill-mode: backwards;
-}
-
-.btn-white {
-  color: $color-grey-dark;
-  background-color: $color-white;
-}
-
-@keyframes moveinbottom {
-  0% {
-    opacity: 0;
-    transform: translateY(10rem);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(0rem);
-  }
-}
-
-@keyframes moveinleft {
-  0% {
-    opacity: 0;
-    transform: translate(-10rem);
-  }
-  80% {
-    opacity: 1;
-    transform: translate(0.8rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0rem);
-  }
-}
-@keyframes moveinright {
-  0% {
-    opacity: 0;
-    transform: translate(10rem);
-  }
-  80% {
-    transform: translate(-0.8rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0px);
-  }
-}
+@import "./components/button";
+@import "./components/compositon";
+@import "./components/featurebox";
+@import "./components/card";

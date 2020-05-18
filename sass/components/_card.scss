@@ -1,0 +1,160 @@
+.card {
+  //front function
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 50rem;
+
+  &__side {
+    height: 50rem;
+
+    transition: all 0.7s ease;
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+
+    &--front {
+      background-color: white;
+    }
+    &--back {
+      transform: rotateY(-180deg);
+
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        );
+      }
+      &-2 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        );
+      }
+      &-3 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-primary-light,
+          $color-primary-dark
+        );
+      }
+    }
+  }
+  &:hover &__side--front {
+    transform: rotateY(180deg);
+  }
+  &:hover &__side--back {
+    transform: rotateY(0deg);
+  }
+  //front styling
+  &__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+    &--1 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($color-secondary-light, 0.5),
+          rgba($color-secondary-dark, 0.3)
+        ),
+        url("../../img/meditation2.jpg");
+      background-position: right;
+    }
+    &--2 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($color-tertiary-light, 0.5),
+          rgba($color-tertiary-dark, 0.3)
+        ),
+        url("../../img/aerobics.jpg");
+    }
+    &--3 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($color-primary-light, 0.52),
+          rgba($color-primary-dark, 0.3)
+        ),
+        url("../../img/yoga.jpg");
+      background-position: center;
+    }
+  }
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: white;
+    position: absolute;
+    text-align: right;
+    top: 15rem;
+    right: 1rem;
+    width: 100%;
+  }
+  &__heading-span {
+    padding: 0.8rem;
+    &--1 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-secondary-light, 0.8),
+        rgba($color-secondary-dark, 0.8)
+      );
+    }
+    &--2 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-tertiary-light, 0.8),
+        rgba($color-tertiary-dark, 0.8)
+      );
+    }
+    &--3 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)
+      );
+    }
+  }
+  &__details {
+    padding: 3rem;
+    ul {
+      width: 80%;
+      margin: 0 auto;
+      li {
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 1rem;
+        &:not(:last-child) {
+          border-bottom: 1px solid #eee;
+        }
+      }
+    }
+  }
+  &__cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    color: white;
+    flex-direction: column;
+  }
+  &__price-box {
+    text-align: center;
+    margin-bottom: 8rem;
+  }
+  &__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+  &__price-value {
+    font-size: 6rem;
+    font-weight: 100;
+  }
+}
