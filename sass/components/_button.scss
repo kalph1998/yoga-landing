@@ -1,5 +1,6 @@
 .btn:link,
-.btn:visited {
+.btn:visited,
+.btn {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -12,7 +13,9 @@
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-.btn:active {
+.btn:active,
+.btn:focus {
+  outline: none;
   transform: translateY(-1px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
@@ -20,7 +23,11 @@
   animation: moveinbottom 0.5s ease-in 0.75s;
   animation-fill-mode: backwards;
 }
-
+.btn--green {
+  color: white;
+  background-color: $color-primary;
+  box-shadow: 0 2px 8px rgba(black, 0.2);
+}
 .btn-white {
   color: $color-grey-dark !important;
   background-color: $color-white;

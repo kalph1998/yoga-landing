@@ -22,7 +22,26 @@
   </head>
 
   <body>
-    <header class="header">
+    <div class="navigation">
+      <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+      <label for="navi-toggle" class="navigation__button">
+        <span class="navigation__icon">&nbsp;</span>
+      </label>
+      <div class="navigation__background">&nbsp;</div>
+      <nav class="navigation__nav">
+        <ul class="navigation__list" onclick="checkBoxHandler()" >
+          <li class="navigation__item"><a href="#header"  class="navigation__link"><span>01</span>home</a></li>
+          <li class="navigation__item"><a href="#about"  class="navigation__link"><span>02</span> About Yoga</a></li>
+          <li class="navigation__item"><a href="#feature" class="navigation__link"><span>03</span>Yoga benifits</a></li>
+          <li class="navigation__item"><a href="#package" class="navigation__link"><span>04</span>Our Classes</a></li>
+          <li class="navigation__item"><a href="#book" class="navigation__link"><span>05</span>Join now</a></li>
+        </ul>
+
+      </nav>
+    </div>
+
+
+    <header class="header" id="header">
       <div class="logo-container">
         <img src="./img//yoga-web-page-final.png" alt="logo" class="logo" />
       </div>
@@ -40,10 +59,10 @@
     </header>
 
     <main>
-      <section class="section-about">
+      <section class="section-about" id="about">
         <div class="text-center u-margin-bottom-big">
           <h2 class="heading-secondary">
-            exciting tour for people
+            Yoga for mind,body and Spirit
           </h2>
         </div>
         <div class="row">
@@ -79,7 +98,7 @@
         </div>
       </section>
 
-      <section class="section-features">
+      <section class="section-features" id="feature">
         <div class="row">
             <div class="grid grid-cols-4 gap-24">
               <div class="feature-box">
@@ -106,14 +125,14 @@
         </div>
       </section>
 
-      <section class="section-package">
+      <section class="section-package" id="package">
         <div class="text-center u-margin-bottom-big">
           <h2 class="heading-secondary">
           Our classes
           </h2>
         </div>
         <div class="row">
-          <div class="grid grid-cols-3 gap-12">
+          <div class="grid grid-cols-3 gap-24">
 
 
             <div class="card">
@@ -216,6 +235,59 @@
 
 
       </section>
+      
+      <section class="section-book" id="book">
+        <div class="row">
+          <div class="book"> 
+            <div class="book__form">
+              <div class=" u-margin-bottom-medium">
+                <h2 class="heading-secondary">
+                start Booking now
+                </h2>
+              </div>
+              <form action="#" class="form">
+                
+                <div class="form__group">
+                  <input type="text" class="form__input" placeholder="Full Name" id="name" required>
+                  <label for="name" class="form__label">Full name</label>
+                </div>
+                <div class="form__group">
+                  <input type="email" class="form__input" placeholder="Email adresss" id="email" required>
+                  <label for="email" class="form__label">Email adress</label>
+                </div>
+                <div class="form__group">
+                 <button class="btn btn--green" type="submit">Book Now</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </main>
+    <footer class="footer">
+      <div class="footer__logo-box">
+        <img src="./img/footer.png" alt="full logo" class="footer__logo">
+        
+      </div>
+      <div class="row">
+        <div class="grid grid-cols-2 gap-24">
+          <div class="footer__navigation">
+            <ul class="footer__list">
+             <li class="footer__item"><a href="#header" class="footer__link">Home</a></li>
+             <li class="footer__item"><a href="#about" class="footer__link">About</a></li>
+             <li class="footer__item"><a href="#" class="footer__link">Contact us</a></li>
+             <li class="footer__item"><a href="#" class="footer__link">Privacy Policiy</a></li>
+             <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
+            </ul>
+          </div>
+          <p class="footer__copyright"> 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet iste molestias harum magni eum vel adipisci possimus, quis omnis magnam.
+          </p>
+        </div>
+      </div>
+        
+    </footer>
+   <script src="./js/test.js" ></script>
   </body>
 </html>
