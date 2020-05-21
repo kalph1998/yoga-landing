@@ -5,15 +5,32 @@
 
   &:not(:last-child) {
     margin-bottom: 80px;
+
+    @include respond(tab-port) {
+      margin-bottom: 60px;
+    }
+  }
+  @include respond(tab-port) {
+    max-width: 50rem;
+    padding: 0 3rem;
   }
 }
 
 .u-margin-bottom-big {
   margin-bottom: 8rem;
+  @include respond(tab-port) {
+    margin-bottom: 5rem;
+  }
 }
 .u-margin-bottom-small {
   margin-bottom: 1.5rem;
+  @include respond(tab-port) {
+    margin-bottom: 1rem;
+  }
 }
 .u-margin-bottom-medium {
   margin-bottom: 4rem;
+  @include respond(tab-port) {
+    margin-bottom: 3rem;
+  }
 }

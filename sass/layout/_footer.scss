@@ -2,8 +2,14 @@
   background-color: #333;
   padding: 10rem 0;
   font-size: 1.4rem;
+  @include respond(tab-port) {
+    padding: 8rem 0;
+  }
   &__logo-box {
     margin-bottom: 8rem;
+    @include respond(phone) {
+      margin-bottom: 5rem;
+    }
   }
   &__logo {
     width: 15rem;
@@ -13,10 +19,16 @@
   &__navigation {
     border-top: 1px solid #777;
     padding-top: 2rem;
+    @include respond(tab-port) {
+      padding-bottom: 1rem;
+    }
   }
   &__list {
     display: flex;
     justify-content: flex-start;
+    @include respond(tab-port) {
+      justify-content: center;
+    }
   }
   &__item {
     &:not(:last-child) {
@@ -39,6 +51,7 @@
     color: #f7f7f7;
     border-top: 1px solid #777;
     padding-top: 1.7rem;
-    width: 80%;
+    width: 100%;
+    text-align: center;
   }
 }

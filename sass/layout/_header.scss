@@ -9,14 +9,23 @@
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  @include respond(phone) {
+    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+  }
 }
 .logo-container {
   position: relative;
   display: flex;
   justify-content: start;
-  padding-left: 2.7rem;
-  padding-top: 3rem;
+  padding-left: 2.2rem;
+  padding-top: 3.5rem;
+  @include respond(tab-port) {
+    padding-top: 4rem;
+  }
+  @include respond(phone) {
+    padding-top: 3rem;
+  }
 }
 .logo {
-  height: 5.5rem;
+  height: 6.5rem;
 }

@@ -12,6 +12,11 @@
     display: block;
     transition: all 0.3s;
 
+    @include respond(tab-port) {
+      background-color: white;
+      width: 100%;
+    }
+
     &:focus:invalid {
       border-bottom: 3px solid $color-secondary-dark;
     }
