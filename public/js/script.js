@@ -1,8 +1,12 @@
-const checkBoxHandler = () => {
-  const checkbox = document.getElementById("navi-toggle");
-  const t = (checkbox.checked = !checkbox.checked);
-  return t;
-};
+const checkbox = document.getElementById("navi-toggle");
+const checkBoxClose = document.querySelectorAll(".navigation__item");
+
+checkBoxClose.forEach((e) => {
+  e.addEventListener("click", () => {
+    const t = (checkbox.checked = !checkbox.checked);
+    return t;
+  });
+});
 
 //adding form
 const form = document.querySelector("form");
